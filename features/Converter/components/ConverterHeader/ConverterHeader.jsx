@@ -5,7 +5,7 @@ const ConverterHeader = () => {
     <Box
       textAlign="center"
       color="white"
-      marginTop={{ base: "8", sm: "20" }}
+      marginTop={{ base: "4", sm: "20" }}
       marginBottom={{ base: "8", sm: "10" }}
     >
       <Text
