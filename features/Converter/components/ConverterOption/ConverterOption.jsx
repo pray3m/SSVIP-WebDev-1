@@ -1,4 +1,5 @@
-import { Flex, Select } from "@chakra-ui/react";
+import { Avatar, Flex, Select } from "@chakra-ui/react";
+import { useFlags } from "../../../common/hooks/useFlags";
 
 const ConverterOption = ({
   symbol,
@@ -6,9 +7,10 @@ const ConverterOption = ({
   onCurrencyChange,
   currency,
 }) => {
-  console.log(currencyList, currency);
+  const flagUrl = useFlags(currency);
   return (
     <Flex gap="1rem" shadow="md" padding="1rem " borderRadius="lg">
+      <Avatar src={flagUrl} size="xs" />
       <Select
         placeholder="Select Currency"
         variant="unstyled"
