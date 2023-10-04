@@ -13,13 +13,15 @@ export const useCurrency = () => {
         queryKey: ["rates", currencyOne],
         queryFn: () => fetchRates(currencyOne),
         staleTime: Infinity,
-        select: ({ rates, date, timestamp }) => ({ rates, date, timestamp }),
+        select: ({ rates, date, timestamp }) => {
+          return { rates, date, timestamp };
+        },
       },
       {
         queryKey: ["symbols"],
-        queryFn: () => fetchSymbols(),
+        queryFn: fetchSymbols,
         staleTime: Infinity,
-        select: ({ symbols }) => ({ symbols }),
+        select: ({ symbols }) => symbols,
       },
     ],
   });
@@ -34,9 +36,7 @@ export const useCurrency = () => {
   const date = new Date(ratesData.data?.date).toLocaleDateString();
   const time = new Date(ratesData.data?.timestamp).toLocaleTimeString("en-US");
 
-  const currencyList = symbolsData.data
-    ? Object.keys(symbolsData.data.symbols)
-    : {};
+  const currencyList = symbolsData.data ? Object.keys(symbolsData.data) : {};
 
   return {
     isLoading,
