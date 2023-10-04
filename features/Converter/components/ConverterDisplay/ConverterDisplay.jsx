@@ -14,7 +14,7 @@ const ConverterDisplay = ({
         {amount} {currencyOne}
       </Text>
 
-      <Text fontSize="3xl" fontWeight="bold" color="purple.500">
+      <Text fontSize="3xl" fontWeight="bold" color="purple.100">
         {convertedAmount} {currencyTwo}
       </Text>
 
