@@ -1,9 +1,12 @@
+import { Flex } from "@chakra-ui/react";
 import Converter from "../features/Converter";
 
 function App() {
   return (
     <>
-      <Converter />
+      <Flex height="100vh" justifyContent="center">
+        <Converter />
+      </Flex>
     </>
   );
 }

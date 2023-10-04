@@ -1,5 +1,6 @@
 import { Box, Spinner, Text } from "@chakra-ui/react";
 import { useCurrency } from "../common/hooks/useCurrency";
+import ConverterHeader from "./components/ConverterHeader";
 
 const Converter = () => {
   const {
@@ -39,7 +40,11 @@ const Converter = () => {
       />
     );
 
-  return <Box width={{ base: "90vw", sm: "45vw" }} margin="0 auto"></Box>;
+  return (
+    <Box width={{ base: "90vw", sm: "45vw" }} margin="0 auto">
+      <ConverterHeader />
+    </Box>
+  );
 };
 
 export default Converter;
