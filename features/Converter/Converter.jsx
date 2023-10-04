@@ -52,7 +52,7 @@ const Converter = () => {
         templateRows="repeat(2,1fr)"
         padding={{ base: "6", sm: "10" }}
         gap="1rem"
-        backgroundColor="purple.900"
+        backgroundColor="cyan.900"
         borderRadius="lg"
       >
         <GridItem
@@ -105,6 +105,23 @@ const Converter = () => {
           />
         </GridItem>
       </Grid>
+
+      <Text
+        textAlign="center"
+        marginTop="1rem"
+        color="whiteAlpha.600"
+        fontSize="sm"
+      >
+        Built with ❤️, by{" "}
+        <a
+          href="https://github.com/pray3m"
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          Prem
+        </a>{" "}
+        using React, React Query, Axios & Chakra UI
+      </Text>
     </Box>
   );
 };
