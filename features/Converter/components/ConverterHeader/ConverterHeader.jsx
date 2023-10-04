@@ -2,7 +2,12 @@ import { Box, Text } from "@chakra-ui/react";
 
 const ConverterHeader = () => {
   return (
-    <Box textAlign="center" color="white" marginTop="20" marginBottom="10">
+    <Box
+      textAlign="center"
+      color="white"
+      marginTop={{ base: "8", sm: "20" }}
+      marginBottom={{ base: "8", sm: "10" }}
+    >
       <Text
         fontSize="3xl"
         bgGradient="linear(to-l, #7928CA, #FF0080)"
